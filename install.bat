@@ -1,12 +1,14 @@
 powershell Invoke-WebRequest -o levilamina-release-nonmimalloc-windows-x64.zip https://github.com/CodeBedrock/levilamina-endstone/releases/download/v0.13.4/levilamina-release-nonmimalloc-windows-x64.zip
 powershell Invoke-WebRequest -o endstone-0.5.0-cp312-cp312-win_amd64.zip https://github.com/CodeBedrock/endstone-levilamina/releases/download/v0.5.0/endstone-0.5.0-cp312-cp312-win_amd64.whl
 powershell Invoke-WebRequest -o cmdfix-windows-x64.zip https://github.com/CodeBedrock/cmdfix/releases/download/v0.0.1/cmdfix-windows-x64.zip
+powershell Invoke-WebRequest -o lip-windows-amd64.zip https://github.com/futrime/lip/releases/download/v0.23.1/lip-windows-amd64.zip
 powershell -Command "Expand-Archive -LiteralPath levilamina-release-nonmimalloc-windows-x64.zip"
 powershell -Command "Expand-Archive -LiteralPath endstone-0.5.0-cp312-cp312-win_amd64.zip"
 powershell -Command "Expand-Archive -LiteralPath cmdfix-windows-x64.zip"
+powershell -Command "Expand-Archive -LiteralPath lip-windows-amd64.zip"
 mkdir server
 cd server
-lip install -y github.com/LiteLDev/LeviLamina
+..\lip-windows-amd64\lip install -y github.com/LiteLDev/LeviLamina
 xcopy ..\levilamina-release-nonmimalloc-windows-x64\LeviLamina .\plugins\LeviLamina /-y
 mkdir .\plugins\cmdfix
 xcopy ..\cmdfix-windows-x64\cmdfix .\plugins\cmdfix /-y
