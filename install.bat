@@ -13,7 +13,7 @@ xcopy ..\cmdfix-windows-x64\cmdfix .\plugins\cmdfix /-y
 mkdir .\plugins\endstone
 echo {"name": "endstone","entry": "../../../Lib/site-packages/endstone/_internal/endstone_runtime.dll","version": "0.5.0","type": "preload-native"} > .\plugins\endstone\manifest.json
 cd ..
-python -m venv .
+py -m venv .
 xcopy .\Scripts\activate.bat .\Scripts\modified.bat
 echo pip install endstone>>.\Scripts\modified.bat
 echo xcopy /E .\endstone-0.5.0-cp312-cp312-win_amd64\ .\Lib\site-packages>>.\Scripts\modified.bat
