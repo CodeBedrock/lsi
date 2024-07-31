@@ -8,7 +8,7 @@ powershell -Command "Expand-Archive -LiteralPath cmdfix-windows-x64.zip"
 powershell -Command "Expand-Archive -LiteralPath lip-windows-amd64.zip"
 mkdir server
 cd server
-..\lip-windows-amd64\lip install -y github.com/LiteLDev/LeviLamina@%1
+..\lip-windows-amd64\lip install -y github.com/LiteLDev/LeviLamina\@%1
 xcopy ..\levilamina-release-nonmimalloc-windows-x64\LeviLamina .\plugins\LeviLamina /-y
 mkdir .\plugins\cmdfix
 xcopy ..\cmdfix-windows-x64\cmdfix .\plugins\cmdfix /-y
