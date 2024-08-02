@@ -1,1 +1,5 @@
-[交流群](http://qm.qq.com/cgi-bin/qm/qr?k=vNWMAl1maiKj46PT7y7Qq1_-rI3RVJAj&group_code=920477582)
+# LSI
+LeviLamina EndStone Installer
+# Usage
+./install_ver LeviLaminaVersion EndstoneVersion cmdfixVersion
+./install_ver.bat 0.13.4 0.5.0 0.0.1
